@@ -1,0 +1,57 @@
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import { future } from "mdx-deck/themes"
+import nightOwl from "prism-react-renderer/themes/nightOwl"
+export { components } from "mdx-deck-code-surfer"
+export const theme = {
+ ...future,
+ codeSurfer: {
+   ...nightOwl,
+   showNumbers: false
+ }
+}
+
+
+# React
+## Context & Hooks
+---
+# Context API
+<img src="./images/1_iRo2eoxlAjNL59nln5sQFA.png" />
+---
+<CodeSurfer
+  title="Provider"
+  code={require("!raw-loader!./snippets/Context.js")}
+  steps={[
+    { notes: "Exemplo de componente em React usando Context" },
+    { range: [3, 29], notes: "UserProvider" },
+  ]}
+/>
+---
+<CodeSurfer
+  title="Consumer"
+  code={require("!raw-loader!./snippets/UsingConsumerOldSchool.js")}
+  steps={[
+    { notes: "Utilizando consumer" },
+    { lines: [10], notes: "Foco na gambiarra" },
+  ]}
+/>
+---
+<CodeSurfer
+  title="Consumer usando Render Prop"
+  code={require("!raw-loader!./snippets/UsingConsumer.js")}
+  steps={[
+    { notes: "Utilizando consumer render prop" },
+    { range: [23, 25], notes: "Passando context via props" },
+  ]}
+/>
+---
+<CodeSurfer
+  title="Consumer usando contextType"
+  code={require("!raw-loader!./snippets/UsingContextType.js")}
+  steps={[
+    { notes: "Utilizando contextType" },
+    { lines: [5], notes: "Utilizando contextType" },
+    { range: [7, 9], notes: "Agora temos acesso ao contexto" },
+    { lines: [12], notes: "Agora temos acesso ao contexto" },
+  ]}
+/>
+---
